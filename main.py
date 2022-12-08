@@ -31,7 +31,7 @@ class Vector:
 
     def isCollinaire(self, v):
         if isinstance(v, Vector):
-            return self.x * v.y == self.y * v.x and self.y * v.z == self.z == v.y
+            return self.x * v.y == self.y * v.x and self.y * v.z == self.z * v.y
         else:
             raise Exception("Non Vecteur")
 
@@ -45,6 +45,6 @@ class Vector:
         return self.z
 
 x = Vector(1, 1, 1)
-y = Vector(2, 2, 2)
+y = Vector(2, 2, 3)
 
-print( x * 3 - y * 2)
+print(x.isCollinaire(y))
